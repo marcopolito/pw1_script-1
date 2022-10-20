@@ -1,27 +1,27 @@
-function calculaA(b, c, d){
-    return (b*c)/d;
+function calculaH(ca, co){
+    return Math.sqrt(Math.pow(ca, 2) + Math.pow(co, 2));
 }
-function calculaB(a, c, d){
-    return (a*d)/c;
+function calculaCa(co, h){
+    return Math.sqrt(Math.pow(h, 2) - Math.pow(co, 2));
 }
-function calculaC(b, a, d){
-    return (a*d)/b;
-}
-function calculaD(b, c, a){
-    return (b*c)/a;
+function calculaCo(ca, h){
+    return Math.sqrt(Math.pow(h, 2) - Math.pow(ca, 2));
 }
 
-function calculaRegraTres(a, b, c, d){
-    if(a==0){
-        return calculaA(b, c, d);
-    }else if(b == 0){
-        return calculaB(a, c, d);
-    }else if(c == 0){
-        return calculaC(b, a, d);
+function calculaPitagoras(h, ca, co){
+    if(h == 0){
+        return calculaH(ca, co);
+    }else if(ca == 0){
+        return calculaCa(co, h);
     }else{
-        return calculaD(b, c, a);
+        return calculaCo(ca, h);
     }
 }
+function recebePitagoras(){
+    let h = document.getElementById("h").value;
+    let ca = document.getElementById("ca").value;
+    let co = document.getElementById("co").value;
 
-console.log(calculaRegraTres(0, 320, 40, 128));
-
+    console.log("Resultado: "+calculaPitagoras(h, ca, co));
+    document.getElementById("resposta").innerHTML=calculaPitagoras(h, ca, co);
+}
