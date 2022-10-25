@@ -17,11 +17,12 @@ function calculaPitagoras(h, ca, co){
         return calculaCo(ca, h);
     }
 }
-function recebePitagoras(){
+
+function abastecePitagoras(){
     let h = document.getElementById("h").value;
     let ca = document.getElementById("ca").value;
     let co = document.getElementById("co").value;
 
-    console.log("Resultado: "+calculaPitagoras(h, ca, co));
-    document.getElementById("resposta").innerHTML=calculaPitagoras(h, ca, co);
+    console.log(calculaPitagoras(h, ca, co));
+    document.getElementById("resultado").innerHTML=calculaPitagoras(h, ca, co);
 }
