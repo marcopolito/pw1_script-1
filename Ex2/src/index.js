@@ -1,4 +1,4 @@
-//#region Pitagoras
+//#region Calculo de Pitagoras
 function pitagorasH(ca,co) {
     return (Math.sqrt(Math.pow(ca,2) + Math.pow(co,2)));
 }
@@ -93,6 +93,6 @@ function calculaAvancado(opcao, p1, p2, p3, p4){
             return "Não existe."
     }
 }
-console.log(calculaAvancado("pitagoras", 0, 20, 21 , null));
+console.log(calculaAvancado("pitagoras", 0, 20, 21));
 console.log(calculaAvancado("regra", 100 , 15000, 20 , 0));
 console.log(calculaAvancado("calculadora", "+", 26, 52 ,null));
